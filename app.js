@@ -25,21 +25,51 @@
 // }
 // z();
 
+// console.log('Start');
+// setTimeout(()=>{
+//   console.log("Callback")
+// },3000);
+// console.log("End");
 
-console.log('Start');
-setTimeout(()=>{
-  console.log("Callback")
-},3000);
-console.log("End");
+// let startDate=new Date().getTime();
+// let endDate=startDate;
+// while(endDate<startDate+10000){
+//   endDate=new Date().getTime()
+// }
+// console.log("While Expires");
 
-let startDate=new Date().getTime();
-let endDate=startDate;
-while(endDate<startDate+10000){
-  endDate=new Date().getTime()
-}
-console.log("While Expires");
+// console.log("Namastee")
+// setTimeout(()=>{
+//   console.log('Guru')
+// },1000)
 
-console.log("Namastee")
-setTimeout(()=>{
-  console.log('Guru')
-},1000)
+let radius = [7, 5, 4, 1];
+
+let calculateArea = function (radius) {
+  let output = [];
+  for (let i = 0; i < radius.length; i++) {
+    output.push(Math.PI * radius[i] * radius[i]);
+  }
+  return output;
+};
+console.log(calculateArea(radius));
+
+let CalucateCurmferice = function (radius) {
+  let output = [];
+  for (let i = 0; i < radius.length; i++) {
+    output.push(2 * Math.PI * radius[i]);
+  }
+  return output;
+};
+console.log(CalucateCurmferice(radius));
+
+
+let CalculateDaimeter = function (radius) {
+  let output = [];
+  for (let i = 0; i < radius.length; i++) {
+    output.push(2 *radius[i]);
+  }
+  return output;
+};
+console.log(CalculateDaimeter(radius));
+
