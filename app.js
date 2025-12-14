@@ -15,12 +15,31 @@
 //     const z=2547;
 // }
 
-var x = 10;
-function z() {
-    let c=25;
-  function m() {
-    console.log(c);
-  }
-  m();
+// var x = 10;
+// function z() {
+//     let c=25;
+//   function m() {
+//     console.log(c);
+//   }
+//   m();
+// }
+// z();
+
+
+console.log('Start');
+setTimeout(()=>{
+  console.log("Callback")
+},3000);
+console.log("End");
+
+let startDate=new Date().getTime();
+let endDate=startDate;
+while(endDate<startDate+10000){
+  endDate=new Date().getTime()
 }
-z();
+console.log("While Expires");
+
+console.log("Namastee")
+setTimeout(()=>{
+  console.log('Guru')
+},1000)
