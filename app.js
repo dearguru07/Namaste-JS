@@ -216,3 +216,18 @@ var addTwoNumbers = function (l1, l2) {
     return headSol.next;
 };
 
+function SecLarge(arry) {
+    let firstLarge = -Infinity;
+    let secLarg = -Infinity;
+    for (let i = 0; i < arry.length; i++){
+        if (arry[i] > firstLarge) {
+            secLarg = firstLarge;
+            firstLarge = arry[i];
+        }
+        else if (arry[i] > secLarg && arry[i]!==firstLarge) {
+            secLarg = arry[i];
+        }
+    }
+    return secLarg;
+}
+console.log(SecLarge([17,15,12, 5, 7, 4, 8, 5, 0, 3, 1, 4, 5, 6, 9, 8, 7,17]))
