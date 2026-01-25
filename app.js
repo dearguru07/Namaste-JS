@@ -280,3 +280,23 @@ console.log(SearchEle(arry, 17));
 console.log(SearchEle(arry, 7));
 console.log(SearchEle(arry, 1));
 console.log(SearchEle(arry, 18));
+
+
+let arry = [15, -5];
+
+function secLarge(a) {
+    if (arry.length < 2) return null;
+    let first = -Infinity;
+    let second = -Infinity;
+    for (let i = 0; i < arry.length; i++) {
+        if (arry[i] > first) {
+            second = first;
+            first = arry[i];
+        }
+        else if (arry[i] > second && arry[i] !== first) {
+            second = arry[i];
+        }
+    }
+    return second;
+}
+console.log(secLarge(arry));
