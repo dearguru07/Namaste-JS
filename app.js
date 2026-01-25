@@ -63,119 +63,113 @@ let CalucateCurmferice = function (radius) {
 };
 console.log(CalucateCurmferice(radius));
 
-
 let CalculateDaimeter = function (radius) {
   let output = [];
   for (let i = 0; i < radius.length; i++) {
-    output.push(2 *radius[i]);
+    output.push(2 * radius[i]);
   }
   return output;
 };
 console.log(CalculateDaimeter(radius));
 
-
-
 function Node(val) {
-    this.val = val;
-    this.next = null;
+  this.val = val;
+  this.next = null;
 }
 var MyLinkedList = function () {
-    this.size = 0;
-    this.head = null;
+  this.size = 0;
+  this.head = null;
 };
 
-/** 
+/**
  * @param {number} index
  * @return {number}
  */
 MyLinkedList.prototype.get = function (index) {
-    if (index < 0 || index >= this.size) return -1;
-    else {
-        let curr = this.head;
-        for (let i = 0; i < index; i++) {
-            curr = curr.next;
-        }
-        return curr.val;
+  if (index < 0 || index >= this.size) return -1;
+  else {
+    let curr = this.head;
+    for (let i = 0; i < index; i++) {
+      curr = curr.next;
     }
+    return curr.val;
+  }
 };
 
-/** 
+/**
  * @param {number} val
  * @return {void}
  */
 MyLinkedList.prototype.addAtHead = function (val) {
-    let headNode = new Node(val);
-    headNode.next = this.head;
-    this.head = headNode;
-    this.size++;
+  let headNode = new Node(val);
+  headNode.next = this.head;
+  this.head = headNode;
+  this.size++;
 };
 
-/** 
+/**
  * @param {number} val
  * @return {void}
  */
 MyLinkedList.prototype.addAtTail = function (val) {
-    let tailNode = new Node(val);
-    if (this.head === null) {
-        this.head = tailNode;
+  let tailNode = new Node(val);
+  if (this.head === null) {
+    this.head = tailNode;
+  } else {
+    let curr = this.head;
+    while (curr.next) {
+      curr = curr.next;
     }
-    else {
-        let curr = this.head;
-        while (curr.next) {
-            curr = curr.next;
-        }
-        curr.next = tailNode;
-    }
-    this.size++;
+    curr.next = tailNode;
+  }
+  this.size++;
 };
 
-/** 
- * @param {number} index 
+/**
+ * @param {number} index
  * @param {number} val
  * @return {void}
  */
 MyLinkedList.prototype.addAtIndex = function (index, val) {
-    if (index < 0 || index > this.size) return;
-    let indexNode = new Node(val);
-    if (index === 0) {
-        this.addAtHead(val);
-        return;
+  if (index < 0 || index > this.size) return;
+  let indexNode = new Node(val);
+  if (index === 0) {
+    this.addAtHead(val);
+    return;
+  }
+  if (index === this.size) {
+    this.addAtTail(val);
+    return;
+  } else {
+    let curr = this.head;
+    for (let i = 0; i < index - 1; i++) {
+      curr = curr.next;
     }
-    if (index === this.size) {
-        this.addAtTail(val);
-        return;
-    }
-    else {
-        let curr = this.head;
-        for (let i = 0; i < index - 1; i++) {
-            curr = curr.next;
-        }
-        indexNode.next = curr.next;
-        curr.next = indexNode;
-    }
-    this.size++;
+    indexNode.next = curr.next;
+    curr.next = indexNode;
+  }
+  this.size++;
 };
 
-/** 
+/**
  * @param {number} index
  * @return {void}
  */
 MyLinkedList.prototype.deleteAtIndex = function (index) {
-    if (index < 0 || index >= this.size) return;
-    if (index === 0) {
-        this.head = this.head.next;
+  if (index < 0 || index >= this.size) return;
+  if (index === 0) {
+    this.head = this.head.next;
+  } else {
+    let curr = this.head;
+    for (let i = 0; i < index - 1; i++) {
+      curr = curr.next;
     }
-    else {
-        let curr = this.head;
-        for (let i = 0; i < index - 1; i++) {
-            curr = curr.next;
-        }
-        curr.next = curr.next.next;
-    }
-    this.size--;
+    curr.next = curr.next.next;
+  }
+  this.size--;
 };
 
-/** 
+/**
  * Your MyLinkedList object will be instantiated and called as such:
  * var obj = new MyLinkedList()
  * var param_1 = obj.get(index)
@@ -184,7 +178,6 @@ MyLinkedList.prototype.deleteAtIndex = function (index) {
  * obj.addAtIndex(index,val)
  * obj.deleteAtIndex(index)
  */
-
 
 /**
  * Definition for singly-linked list.
@@ -200,34 +193,51 @@ MyLinkedList.prototype.deleteAtIndex = function (index) {
  */
 
 var addTwoNumbers = function (l1, l2) {
-    let sol = new ListNode();
-    let headSol = sol;
-    let carry = 0
-    while (l1 || l2 || carry) {
-        let sum = (!l1 ? 0 : l1.val) + (!l2 ? 0 : l2.val) + carry;
-        carry = Math.floor(sum / 10);
-        let digit = sum % 10;
-        let newNode = new ListNode(digit);
-        sol.next = newNode;
-        sol = sol.next;
-        l1 = l1 && l1.next;
-        l2 = l2 && l2.next;
-    }
-    return headSol.next;
+  let sol = new ListNode();
+  let headSol = sol;
+  let carry = 0;
+  while (l1 || l2 || carry) {
+    let sum = (!l1 ? 0 : l1.val) + (!l2 ? 0 : l2.val) + carry;
+    carry = Math.floor(sum / 10);
+    let digit = sum % 10;
+    let newNode = new ListNode(digit);
+    sol.next = newNode;
+    sol = sol.next;
+    l1 = l1 && l1.next;
+    l2 = l2 && l2.next;
+  }
+  return headSol.next;
 };
 
 function SecLarge(arry) {
-    let firstLarge = -Infinity;
-    let secLarg = -Infinity;
-    for (let i = 0; i < arry.length; i++){
-        if (arry[i] > firstLarge) {
-            secLarg = firstLarge;
-            firstLarge = arry[i];
-        }
-        else if (arry[i] > secLarg && arry[i]!==firstLarge) {
-            secLarg = arry[i];
-        }
+  let firstLarge = -Infinity;
+  let secLarg = -Infinity;
+  for (let i = 0; i < arry.length; i++) {
+    if (arry[i] > firstLarge) {
+      secLarg = firstLarge;
+      firstLarge = arry[i];
+    } else if (arry[i] > secLarg && arry[i] !== firstLarge) {
+      secLarg = arry[i];
     }
-    return secLarg;
+  }
+  return secLarg;
 }
-console.log(SecLarge([17,15,12, 5, 7, 4, 8, 5, 0, 3, 1, 4, 5, 6, 9, 8, 7,17]))
+console.log(
+  SecLarge([17, 15, 12, 5, 7, 4, 8, 5, 0, 3, 1, 4, 5, 6, 9, 8, 7, 17]),
+);
+
+let arry = [15, 5, 7, 4, 8, 5, 0, 3, 1, 4, 5, 6, 9, 8, 7];
+
+for (let i = 0; i < arry.length; i++) {
+  if (arry[i] % 2 == 0) {
+    console.log(arry[i]);
+  }
+}
+
+console.log("----------------");
+
+for (let i = 0; i < arry.length; i++) {
+  if (arry[i] % 2 == 0) {
+    console.log(i);
+  }
+}
