@@ -241,3 +241,42 @@ for (let i = 0; i < arry.length; i++) {
     console.log(i);
   }
 }
+
+
+let arry = [15, 5, 7, 4, 8, 5, 0, 3, 1, 4, 5, 6, 9, 8, 17];
+
+// for (let i = 0; i < arry.length; i++){
+//     if (arry[i] % 2 == 0) {
+//         console.log(arry[i])
+//     }
+// }
+
+
+// console.log('----------------');
+
+// for (let i = 0; i < arry.length; i++) {
+//     if (arry[i] % 2 == 0) {
+//         console.log(i)
+//     }
+// }
+
+
+
+// let n = 10;
+// while (n > 0) {
+//     console.log(n);
+//     n--;
+// }
+
+function SearchEle(arry, x) {
+    for (let i = 0; i < arry.length; i++) {
+        if (arry[i] === x) {
+            return i;
+        }
+    }
+    return -1
+}
+console.log(SearchEle(arry, 17));
+console.log(SearchEle(arry, 7));
+console.log(SearchEle(arry, 1));
+console.log(SearchEle(arry, 18));
