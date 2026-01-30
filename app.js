@@ -300,3 +300,39 @@ function secLarge(a) {
     return second;
 }
 console.log(secLarge(arry));
+
+
+let array1 = [1, 2, 5, 4, 7, 8, 5, 12, 11, 4, 2, 0]
+function SecLarge(array1) {
+    let first = -Infinity;
+    let second = -Infinity;
+    for (let i = 0; i < array1.length; i++) {
+        if (array1[i] > first) {
+            second = first;
+            first = array1[i];
+        }
+        else if (array1[i] > second && array1[i] !== first) {
+            second = array1[i];
+        }
+    }
+    return second;
+}
+console.log(SecLarge(array1));
+
+
+let array = [1, 2, 5, 4, 7, 8,8, 5, 12, 12, 4, 2, 0]
+function SecLarge(array) {
+    let first = -Infinity;
+    let second = -Infinity;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > first) {
+            second = first;
+            first = array[i];
+        }
+        else if (array[i] > second && array[i] !== first) {
+            second = array[i];
+        }
+    }
+    return second;
+}
+console.log(SecLarge(array))
