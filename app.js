@@ -1,338 +1,338 @@
-// console.log('Hello world...')
+// // console.log('Hello world...')
 
-// let a =10;
-// console.log(a);
-// var b=100;
+// // let a =10;
+// // console.log(a);
+// // var b=100;
 
-// const z=100;
-// z=25;
+// // const z=100;
+// // z=25;
 
-// var a=10;
-// let b=20;
-// const c=100;
-// {
-//     let x=25;
-//     const z=2547;
-// }
+// // var a=10;
+// // let b=20;
+// // const c=100;
+// // {
+// //     let x=25;
+// //     const z=2547;
+// // }
 
-// var x = 10;
-// function z() {
-//     let c=25;
-//   function m() {
-//     console.log(c);
+// // var x = 10;
+// // function z() {
+// //     let c=25;
+// //   function m() {
+// //     console.log(c);
+// //   }
+// //   m();
+// // }
+// // z();
+
+// // console.log('Start');
+// // setTimeout(()=>{
+// //   console.log("Callback")
+// // },3000);
+// // console.log("End");
+
+// // let startDate=new Date().getTime();
+// // let endDate=startDate;
+// // while(endDate<startDate+10000){
+// //   endDate=new Date().getTime()
+// // }
+// // console.log("While Expires");
+
+// // console.log("Namastee")
+// // setTimeout(()=>{
+// //   console.log('Guru')
+// // },1000)
+
+// let radius = [7, 5, 4, 1];
+
+// let calculateArea = function (radius) {
+//   let output = [];
+//   for (let i = 0; i < radius.length; i++) {
+//     output.push(Math.PI * radius[i] * radius[i]);
 //   }
-//   m();
+//   return output;
+// };
+// console.log(calculateArea(radius));
+
+// let CalucateCurmferice = function (radius) {
+//   let output = [];
+//   for (let i = 0; i < radius.length; i++) {
+//     output.push(2 * Math.PI * radius[i]);
+//   }
+//   return output;
+// };
+// console.log(CalucateCurmferice(radius));
+
+// let CalculateDaimeter = function (radius) {
+//   let output = [];
+//   for (let i = 0; i < radius.length; i++) {
+//     output.push(2 * radius[i]);
+//   }
+//   return output;
+// };
+// console.log(CalculateDaimeter(radius));
+
+// function Node(val) {
+//   this.val = val;
+//   this.next = null;
 // }
-// z();
+// var MyLinkedList = function () {
+//   this.size = 0;
+//   this.head = null;
+// };
 
-// console.log('Start');
-// setTimeout(()=>{
-//   console.log("Callback")
-// },3000);
-// console.log("End");
-
-// let startDate=new Date().getTime();
-// let endDate=startDate;
-// while(endDate<startDate+10000){
-//   endDate=new Date().getTime()
-// }
-// console.log("While Expires");
-
-// console.log("Namastee")
-// setTimeout(()=>{
-//   console.log('Guru')
-// },1000)
-
-let radius = [7, 5, 4, 1];
-
-let calculateArea = function (radius) {
-  let output = [];
-  for (let i = 0; i < radius.length; i++) {
-    output.push(Math.PI * radius[i] * radius[i]);
-  }
-  return output;
-};
-console.log(calculateArea(radius));
-
-let CalucateCurmferice = function (radius) {
-  let output = [];
-  for (let i = 0; i < radius.length; i++) {
-    output.push(2 * Math.PI * radius[i]);
-  }
-  return output;
-};
-console.log(CalucateCurmferice(radius));
-
-let CalculateDaimeter = function (radius) {
-  let output = [];
-  for (let i = 0; i < radius.length; i++) {
-    output.push(2 * radius[i]);
-  }
-  return output;
-};
-console.log(CalculateDaimeter(radius));
-
-function Node(val) {
-  this.val = val;
-  this.next = null;
-}
-var MyLinkedList = function () {
-  this.size = 0;
-  this.head = null;
-};
-
-/**
- * @param {number} index
- * @return {number}
- */
-MyLinkedList.prototype.get = function (index) {
-  if (index < 0 || index >= this.size) return -1;
-  else {
-    let curr = this.head;
-    for (let i = 0; i < index; i++) {
-      curr = curr.next;
-    }
-    return curr.val;
-  }
-};
-
-/**
- * @param {number} val
- * @return {void}
- */
-MyLinkedList.prototype.addAtHead = function (val) {
-  let headNode = new Node(val);
-  headNode.next = this.head;
-  this.head = headNode;
-  this.size++;
-};
-
-/**
- * @param {number} val
- * @return {void}
- */
-MyLinkedList.prototype.addAtTail = function (val) {
-  let tailNode = new Node(val);
-  if (this.head === null) {
-    this.head = tailNode;
-  } else {
-    let curr = this.head;
-    while (curr.next) {
-      curr = curr.next;
-    }
-    curr.next = tailNode;
-  }
-  this.size++;
-};
-
-/**
- * @param {number} index
- * @param {number} val
- * @return {void}
- */
-MyLinkedList.prototype.addAtIndex = function (index, val) {
-  if (index < 0 || index > this.size) return;
-  let indexNode = new Node(val);
-  if (index === 0) {
-    this.addAtHead(val);
-    return;
-  }
-  if (index === this.size) {
-    this.addAtTail(val);
-    return;
-  } else {
-    let curr = this.head;
-    for (let i = 0; i < index - 1; i++) {
-      curr = curr.next;
-    }
-    indexNode.next = curr.next;
-    curr.next = indexNode;
-  }
-  this.size++;
-};
-
-/**
- * @param {number} index
- * @return {void}
- */
-MyLinkedList.prototype.deleteAtIndex = function (index) {
-  if (index < 0 || index >= this.size) return;
-  if (index === 0) {
-    this.head = this.head.next;
-  } else {
-    let curr = this.head;
-    for (let i = 0; i < index - 1; i++) {
-      curr = curr.next;
-    }
-    curr.next = curr.next.next;
-  }
-  this.size--;
-};
-
-/**
- * Your MyLinkedList object will be instantiated and called as such:
- * var obj = new MyLinkedList()
- * var param_1 = obj.get(index)
- * obj.addAtHead(val)
- * obj.addAtTail(val)
- * obj.addAtIndex(index,val)
- * obj.deleteAtIndex(index)
- */
-
-/**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
- */
-/**
- * @param {ListNode} l1
- * @param {ListNode} l2
- * @return {ListNode}
- */
-
-var addTwoNumbers = function (l1, l2) {
-  let sol = new ListNode();
-  let headSol = sol;
-  let carry = 0;
-  while (l1 || l2 || carry) {
-    let sum = (!l1 ? 0 : l1.val) + (!l2 ? 0 : l2.val) + carry;
-    carry = Math.floor(sum / 10);
-    let digit = sum % 10;
-    let newNode = new ListNode(digit);
-    sol.next = newNode;
-    sol = sol.next;
-    l1 = l1 && l1.next;
-    l2 = l2 && l2.next;
-  }
-  return headSol.next;
-};
-
-function SecLarge(arry) {
-  let firstLarge = -Infinity;
-  let secLarg = -Infinity;
-  for (let i = 0; i < arry.length; i++) {
-    if (arry[i] > firstLarge) {
-      secLarg = firstLarge;
-      firstLarge = arry[i];
-    } else if (arry[i] > secLarg && arry[i] !== firstLarge) {
-      secLarg = arry[i];
-    }
-  }
-  return secLarg;
-}
-console.log(
-  SecLarge([17, 15, 12, 5, 7, 4, 8, 5, 0, 3, 1, 4, 5, 6, 9, 8, 7, 17]),
-);
-
-let arry = [15, 5, 7, 4, 8, 5, 0, 3, 1, 4, 5, 6, 9, 8, 7];
-
-for (let i = 0; i < arry.length; i++) {
-  if (arry[i] % 2 == 0) {
-    console.log(arry[i]);
-  }
-}
-
-console.log("----------------");
-
-for (let i = 0; i < arry.length; i++) {
-  if (arry[i] % 2 == 0) {
-    console.log(i);
-  }
-}
-
-
-let arry = [15, 5, 7, 4, 8, 5, 0, 3, 1, 4, 5, 6, 9, 8, 17];
-
-// for (let i = 0; i < arry.length; i++){
-//     if (arry[i] % 2 == 0) {
-//         console.log(arry[i])
+// /**
+//  * @param {number} index
+//  * @return {number}
+//  */
+// MyLinkedList.prototype.get = function (index) {
+//   if (index < 0 || index >= this.size) return -1;
+//   else {
+//     let curr = this.head;
+//     for (let i = 0; i < index; i++) {
+//       curr = curr.next;
 //     }
+//     return curr.val;
+//   }
+// };
+
+// /**
+//  * @param {number} val
+//  * @return {void}
+//  */
+// MyLinkedList.prototype.addAtHead = function (val) {
+//   let headNode = new Node(val);
+//   headNode.next = this.head;
+//   this.head = headNode;
+//   this.size++;
+// };
+
+// /**
+//  * @param {number} val
+//  * @return {void}
+//  */
+// MyLinkedList.prototype.addAtTail = function (val) {
+//   let tailNode = new Node(val);
+//   if (this.head === null) {
+//     this.head = tailNode;
+//   } else {
+//     let curr = this.head;
+//     while (curr.next) {
+//       curr = curr.next;
+//     }
+//     curr.next = tailNode;
+//   }
+//   this.size++;
+// };
+
+// /**
+//  * @param {number} index
+//  * @param {number} val
+//  * @return {void}
+//  */
+// MyLinkedList.prototype.addAtIndex = function (index, val) {
+//   if (index < 0 || index > this.size) return;
+//   let indexNode = new Node(val);
+//   if (index === 0) {
+//     this.addAtHead(val);
+//     return;
+//   }
+//   if (index === this.size) {
+//     this.addAtTail(val);
+//     return;
+//   } else {
+//     let curr = this.head;
+//     for (let i = 0; i < index - 1; i++) {
+//       curr = curr.next;
+//     }
+//     indexNode.next = curr.next;
+//     curr.next = indexNode;
+//   }
+//   this.size++;
+// };
+
+// /**
+//  * @param {number} index
+//  * @return {void}
+//  */
+// MyLinkedList.prototype.deleteAtIndex = function (index) {
+//   if (index < 0 || index >= this.size) return;
+//   if (index === 0) {
+//     this.head = this.head.next;
+//   } else {
+//     let curr = this.head;
+//     for (let i = 0; i < index - 1; i++) {
+//       curr = curr.next;
+//     }
+//     curr.next = curr.next.next;
+//   }
+//   this.size--;
+// };
+
+// /**
+//  * Your MyLinkedList object will be instantiated and called as such:
+//  * var obj = new MyLinkedList()
+//  * var param_1 = obj.get(index)
+//  * obj.addAtHead(val)
+//  * obj.addAtTail(val)
+//  * obj.addAtIndex(index,val)
+//  * obj.deleteAtIndex(index)
+//  */
+
+// /**
+//  * Definition for singly-linked list.
+//  * function ListNode(val, next) {
+//  *     this.val = (val===undefined ? 0 : val)
+//  *     this.next = (next===undefined ? null : next)
+//  * }
+//  */
+// /**
+//  * @param {ListNode} l1
+//  * @param {ListNode} l2
+//  * @return {ListNode}
+//  */
+
+// var addTwoNumbers = function (l1, l2) {
+//   let sol = new ListNode();
+//   let headSol = sol;
+//   let carry = 0;
+//   while (l1 || l2 || carry) {
+//     let sum = (!l1 ? 0 : l1.val) + (!l2 ? 0 : l2.val) + carry;
+//     carry = Math.floor(sum / 10);
+//     let digit = sum % 10;
+//     let newNode = new ListNode(digit);
+//     sol.next = newNode;
+//     sol = sol.next;
+//     l1 = l1 && l1.next;
+//     l2 = l2 && l2.next;
+//   }
+//   return headSol.next;
+// };
+
+// function SecLarge(arry) {
+//   let firstLarge = -Infinity;
+//   let secLarg = -Infinity;
+//   for (let i = 0; i < arry.length; i++) {
+//     if (arry[i] > firstLarge) {
+//       secLarg = firstLarge;
+//       firstLarge = arry[i];
+//     } else if (arry[i] > secLarg && arry[i] !== firstLarge) {
+//       secLarg = arry[i];
+//     }
+//   }
+//   return secLarg;
 // }
+// console.log(
+//   SecLarge([17, 15, 12, 5, 7, 4, 8, 5, 0, 3, 1, 4, 5, 6, 9, 8, 7, 17]),
+// );
 
-
-// console.log('----------------');
+// let arry = [15, 5, 7, 4, 8, 5, 0, 3, 1, 4, 5, 6, 9, 8, 7];
 
 // for (let i = 0; i < arry.length; i++) {
-//     if (arry[i] % 2 == 0) {
-//         console.log(i)
+//   if (arry[i] % 2 == 0) {
+//     console.log(arry[i]);
+//   }
+// }
+
+// console.log("----------------");
+
+// for (let i = 0; i < arry.length; i++) {
+//   if (arry[i] % 2 == 0) {
+//     console.log(i);
+//   }
+// }
+
+
+// let arry = [15, 5, 7, 4, 8, 5, 0, 3, 1, 4, 5, 6, 9, 8, 17];
+
+// // for (let i = 0; i < arry.length; i++){
+// //     if (arry[i] % 2 == 0) {
+// //         console.log(arry[i])
+// //     }
+// // }
+
+
+// // console.log('----------------');
+
+// // for (let i = 0; i < arry.length; i++) {
+// //     if (arry[i] % 2 == 0) {
+// //         console.log(i)
+// //     }
+// // }
+
+
+
+// // let n = 10;
+// // while (n > 0) {
+// //     console.log(n);
+// //     n--;
+// // }
+
+// function SearchEle(arry, x) {
+//     for (let i = 0; i < arry.length; i++) {
+//         if (arry[i] === x) {
+//             return i;
+//         }
 //     }
+//     return -1
 // }
+// console.log(SearchEle(arry, 17));
+// console.log(SearchEle(arry, 7));
+// console.log(SearchEle(arry, 1));
+// console.log(SearchEle(arry, 18));
 
 
+// let arry = [15, -5];
 
-// let n = 10;
-// while (n > 0) {
-//     console.log(n);
-//     n--;
+// function secLarge(a) {
+//     if (arry.length < 2) return null;
+//     let first = -Infinity;
+//     let second = -Infinity;
+//     for (let i = 0; i < arry.length; i++) {
+//         if (arry[i] > first) {
+//             second = first;
+//             first = arry[i];
+//         }
+//         else if (arry[i] > second && arry[i] !== first) {
+//             second = arry[i];
+//         }
+//     }
+//     return second;
 // }
-
-function SearchEle(arry, x) {
-    for (let i = 0; i < arry.length; i++) {
-        if (arry[i] === x) {
-            return i;
-        }
-    }
-    return -1
-}
-console.log(SearchEle(arry, 17));
-console.log(SearchEle(arry, 7));
-console.log(SearchEle(arry, 1));
-console.log(SearchEle(arry, 18));
+// console.log(secLarge(arry));
 
 
-let arry = [15, -5];
-
-function secLarge(a) {
-    if (arry.length < 2) return null;
-    let first = -Infinity;
-    let second = -Infinity;
-    for (let i = 0; i < arry.length; i++) {
-        if (arry[i] > first) {
-            second = first;
-            first = arry[i];
-        }
-        else if (arry[i] > second && arry[i] !== first) {
-            second = arry[i];
-        }
-    }
-    return second;
-}
-console.log(secLarge(arry));
+// let array1 = [1, 2, 5, 4, 7, 8, 5, 12, 11, 4, 2, 0]
+// function SecLarge(array1) {
+//     let first = -Infinity;
+//     let second = -Infinity;
+//     for (let i = 0; i < array1.length; i++) {
+//         if (array1[i] > first) {
+//             second = first;
+//             first = array1[i];
+//         }
+//         else if (array1[i] > second && array1[i] !== first) {
+//             second = array1[i];
+//         }
+//     }
+//     return second;
+// }
+// console.log(SecLarge(array1));
 
 
-let array1 = [1, 2, 5, 4, 7, 8, 5, 12, 11, 4, 2, 0]
-function SecLarge(array1) {
-    let first = -Infinity;
-    let second = -Infinity;
-    for (let i = 0; i < array1.length; i++) {
-        if (array1[i] > first) {
-            second = first;
-            first = array1[i];
-        }
-        else if (array1[i] > second && array1[i] !== first) {
-            second = array1[i];
-        }
-    }
-    return second;
-}
-console.log(SecLarge(array1));
-
-
-let array = [1, 2, 5, 4, 7, 8,8, 5, 12, 12, 4, 2, 0]
-function SecLarge(array) {
-    let first = -Infinity;
-    let second = -Infinity;
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] > first) {
-            second = first;
-            first = array[i];
-        }
-        else if (array[i] > second && array[i] !== first) {
-            second = array[i];
-        }
-    }
-    return second;
-}
-console.log(SecLarge(array))
+// let array = [1, 2, 5, 4, 7, 8,8, 5, 12, 12, 4, 2, 0]
+// function SecLarge(array) {
+//     let first = -Infinity;
+//     let second = -Infinity;
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] > first) {
+//             second = first;
+//             first = array[i];
+//         }
+//         else if (array[i] > second && array[i] !== first) {
+//             second = array[i];
+//         }
+//     }
+//     return second;
+// }
+// console.log(SecLarge(array))
