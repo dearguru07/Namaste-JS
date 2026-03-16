@@ -56,3 +56,28 @@ let obj = {
   },
 };
 obj.b();
+
+
+let obj = {
+  a: 10,
+  b: () => {
+    console.log(this);
+  },
+};
+obj.b();
+
+let obj = {
+  a: 10,
+  b: () => {
+    console.log(this);
+  },
+};
+obj.b();
+
+let obj = {
+  a: 10,
+  b: () => {
+    console.log(this);
+  },
+};
+obj.b();
