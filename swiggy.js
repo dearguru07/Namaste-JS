@@ -1,4 +1,4 @@
-// "use strict"
+"use strict";
 
 // const fetchData = async () => {
 // //   try {
@@ -49,35 +49,27 @@
 // }
 // student.printName.call(student2)
 
-let obj = {
-  a: 10,
-  b: () => {
-    console.log(this);
-  },
-};
-obj.b();
+// let obj = {
+//   a: 10,
+//   b: () => {
+//     console.log(this);
+//   },
+// };
+// obj.b();
+
+// v="Helloworld";
+// console.log(v)
+
+const numbers = [10, 20, 30, 40];
+const result = numbers.reduce((acc, current) => acc + current, 5);
+console.log(result)
 
 
-let obj = {
-  a: 10,
-  b: () => {
-    console.log(this);
-  },
-};
-obj.b();
+let count = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+  console.log(count)
 
-let obj = {
-  a: 10,
-  b: () => {
-    console.log(this);
-  },
-};
-obj.b();
-
-let obj = {
-  a: 10,
-  b: () => {
-    console.log(this);
-  },
-};
-obj.b();
+  }, 0);
+}
