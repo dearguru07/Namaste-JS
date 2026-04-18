@@ -62,24 +62,118 @@
 
 const numbers = [10, 20, 30, 40];
 const result = numbers.reduce((acc, current) => acc + current, 5);
-console.log(result)
-
+console.log(result);
 
 let count = 0;
 for (var i = 0; i < 3; i++) {
   setTimeout(() => {
     count += i;
-  console.log(count)
-
+    console.log(count);
   }, 0);
 }
 
-
-let count = 0;
+let count1 = 0;
 for (var i = 0; i < 3; i++) {
   setTimeout(() => {
     count += i;
-  console.log(count)
-
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
   }, 0);
 }
