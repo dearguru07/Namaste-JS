@@ -328,3 +328,150 @@ for (var i = 0; i < 3; i++) {
   }, 0);
 }
 
+vlet count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
+let count1 = 0;
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    count += i;
+    console.log(count);
+  }, 0);
+}
