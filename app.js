@@ -320,19 +320,19 @@
 // console.log(SecLarge(array1));
 
 
-// let array = [1, 2, 5, 4, 7, 8,8, 5, 12, 12, 4, 2, 0]
-// function SecLarge(array) {
-//     let first = -Infinity;
-//     let second = -Infinity;
-//     for (let i = 0; i < array.length; i++) {
-//         if (array[i] > first) {
-//             second = first;
-//             first = array[i];
-//         }
-//         else if (array[i] > second && array[i] !== first) {
-//             second = array[i];
-//         }
-//     }
-//     return second;
-// }
-// console.log(SecLarge(array))
+let array = [1, 2, 5, 4, 7, 8,8, 5, 12, 12, 4, 2, 0]
+function SecLarge(array) {
+    let first = -Infinity;
+    let second = -Infinity;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > first) {
+            second = first;
+            first = array[i];
+        }
+        else if (array[i] > second && array[i] !== first) {
+            second = array[i];
+        }
+    }
+    return second;
+}
+console.log(SecLarge(array))

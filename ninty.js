@@ -4,7 +4,6 @@ const USERS_API = "https://jsonplaceholder.typicode.com/users";
 
 const Card = ({ details }) => {
   const { name, email, address, phone } = details;
-
   return (
     <div className="card">
       <h3>Name: {name}</h3>
